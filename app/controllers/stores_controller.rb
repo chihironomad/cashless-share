@@ -1,6 +1,6 @@
 class StoresController < ApplicationController
   def index
-    @stores = Store.all
+    @stores = Store.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
