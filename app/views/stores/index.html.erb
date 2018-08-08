@@ -1,0 +1,17 @@
+<div class="row">
+  <% @stores.each do |store| %>
+  <div class="col s12 m6">
+    <div class="card blue darken-3">
+      <div class="card-content white-text">
+        <span class="card-title"><%= store.store_name %></span>
+        <p><%= store.c_card %></p>
+        <p><%= store.e_money %></p>
+      </div>
+      <div class="card-action">
+        <a href="#">This is a link</a>
+        <a href="#">This is a link</a>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
