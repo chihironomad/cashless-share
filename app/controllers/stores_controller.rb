@@ -8,6 +8,7 @@ class StoresController < ApplicationController
 
   def create
     Store.create(store_params)
+    redirect_to :root
   end
 
   private
