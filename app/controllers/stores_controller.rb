@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
   def index
-    @store = "オリジナルアプリ作成なう"
+    @store = Store.all
   end
 end
