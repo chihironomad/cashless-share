@@ -9,7 +9,7 @@ class StoresController < ApplicationController
   end
 
   def create
-    Store.create(store_params)
+    Store.create(store_name: store_params[:store_name], c_card: store_params[:c_card], e_money: store_params[:e_money], user_id: current_user.id)
     redirect_to :root
   end
 
