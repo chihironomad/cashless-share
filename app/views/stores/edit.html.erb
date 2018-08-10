@@ -1,0 +1,20 @@
+<div class="row">
+  <%= form_tag('/stores', method: :patch) do %>
+  <h4>編集する</h4>
+    <div class="row">
+      <div class="input-field col s8">
+        <input placeholder="店名を入れてください" type="text" class="validate" name="store_name" value="<%= @store.store_name %>" autofocus="true">
+        <label for="first_name">店名</label>
+      </div>
+      <div class="input-field col s8">
+        <input placeholder="(例)VISA､マスターカード､UC､アメックス､JCB等・・・" type="text" class="validate" name="c_card" value="<%= @store.c_card %>">
+        <label for="first_name">使用できるクレジットカードの種類を入力してください</label>
+      </div>
+      <div class="input-field col s8">
+        <input placeholder="(例)Suica、QUICPay等・・・" type="text" class="validate" name="e_money" value="<%= @store.e_money %>">
+        <label for="first_name">使用できる電子マネーの種類を入力してください</label>
+        <input type="submit" value="編集">
+      </div>
+    </div>
+  <% end %>
+</div>
