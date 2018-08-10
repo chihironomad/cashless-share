@@ -18,6 +18,7 @@
       <a href="/" class="brand-logo">キャッシュレスシェア</a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
       <% if user_signed_in? %>
+        <li><%= current_user.nickname %> : </li>
         <li><%= link_to "投稿する", new_store_path %></li>
         <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete %> </li>
       <% else %>
