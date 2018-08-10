@@ -17,6 +17,11 @@ class StoresController < ApplicationController
     @store = Store.find(params[:id])
   end
 
+  def update
+    store = Store.find(params[:id])
+    store.update(store_params) if store.user_id == current_user.id
+  end
+
   private
   def store_params
     params.permit(:store_name, :c_card, :e_money)
