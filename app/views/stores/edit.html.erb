@@ -1,5 +1,5 @@
 <div class="row">
-  <%= form_tag('/stores', method: :patch) do %>
+  <%= form_tag("/stores/#{@store.id}", method: :patch) do %>
   <h4>編集する</h4>
     <div class="row">
       <div class="input-field col s8">
