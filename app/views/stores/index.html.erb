@@ -12,10 +12,12 @@
           <p><%= store.e_money %></p>
           <h6>投稿者 : <%= store.user.nickname %></h6>
         </div>
+        <% if user_signed_in? %>
         <div class="card-action">
           <%= link_to '編集', "/stores/#{store.id}/edit", method: :get, class: "waves-effect waves-light btn" %>
           <%= link_to '削除', "/stores/#{store.id}", method: :delete, class: "waves-effect waves-light btn" %>
         </div>
+        <% end %>
       </div>
     </div>
     <% end %>
