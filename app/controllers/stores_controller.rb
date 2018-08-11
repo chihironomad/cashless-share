@@ -27,6 +27,10 @@ class StoresController < ApplicationController
     store.destroy
   end
 
+  def search
+    @stores = Store.where('store_name LIKE(?)', "%#{(params[:keyword])}%").limit(10)
+  end
+
   private
   def store_params
     params.permit(:store_name, :c_card, :e_money)
