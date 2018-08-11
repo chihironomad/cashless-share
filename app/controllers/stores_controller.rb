@@ -22,6 +22,11 @@ class StoresController < ApplicationController
     store.update(store_params)
   end
 
+  def destroy
+    store = Store.find(params[:id])
+    store.destroy
+  end
+
   private
   def store_params
     params.permit(:store_name, :c_card, :e_money)
