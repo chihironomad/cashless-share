@@ -19,7 +19,7 @@ class StoresController < ApplicationController
 
   def update
     store = Store.find(params[:id])
-    store.update(store_params) if store.user_id == current_user.id
+    store.update(store_params)
   end
 
   private
