@@ -10,6 +10,7 @@
 
   <!-- Compiled and minified JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
 
@@ -25,6 +26,7 @@
         <li><%= link_to "ログイン", new_user_session_path %></li>
         <li><%= link_to "新規登録", new_user_registration_path %><li>
       <% end %>
+        <li><%= link_to "検索する", search_stores_path, method: :get %></li>
       </ul>
     </div>
   </nav>

@@ -1,5 +1,5 @@
 class StoresController < ApplicationController
-  before_action :move_to_index, except: :index
+  before_action :move_to_index, except: [:index, :search]
 
   def index
     @stores = Store.includes(:user).page(params[:page]).per(5).order("created_at DESC")
@@ -25,6 +25,10 @@ class StoresController < ApplicationController
   def destroy
     store = Store.find(params[:id])
     store.destroy
+  end
+
+  def search
+    @stores = Store.where('store_name LIKE(?)', "%#{(params[:keyword])}%").limit(10)
   end
 
   private
