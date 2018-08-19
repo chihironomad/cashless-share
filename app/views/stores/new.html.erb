@@ -6,16 +6,27 @@
         <input placeholder="店名を入れてください" type="text" class="validate" name="store_name" autofocus="true">
         <label for="first_name">店名</label>
       </div>
-      <div class="input-field col s8">
-        <input placeholder="(例)VISA､マスターカード､UC､アメックス､JCB等・・・" type="text" class="validate" name="c_card">
-        <label for="first_name">使用できるクレジットカードの種類を入力してください</label>
-      </div>
-      <div class="input-field col s8">
-        <input placeholder="(例)Suica、QUICPay等・・・" type="text" class="validate" name="e_money">
-        <label for="first_name">使用できる電子マネーの種類を入力してください</label>
-        <input type="submit" value="送信">
       </div>
     </div>
+    <div class="row">
+      <div class="input-field col s8">
+      <p>使用できるクレジットカードにチェックを入れてください</p>
+      <p>
+        <label>
+          <input type="checkbox" class="filled-in" name="c_card" value="VISA" />
+          <span>VISA</span>
+        </label>
+      </p>
+      <p>使用できる電子マネーにチェックを入れてください</p>
+      <p>
+        <label>
+          <input type="checkbox" class="filled-in" name="e_money" value="Suica" />
+          <span>Suica</span>
+        </label>
+      </p>
+      <input type="submit" value="送信">
+    </div>
+  </div>
   <% end %>
 </div>
 
