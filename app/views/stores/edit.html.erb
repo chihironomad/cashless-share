@@ -1,3 +1,12 @@
+<% if @store.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <ul>
+      <% @store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <div class="row">
   <%= form_tag("/stores/#{@store.id}", method: :patch) do %>
   <h4>編集する</h4>
