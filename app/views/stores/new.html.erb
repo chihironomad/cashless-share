@@ -1,3 +1,12 @@
+<% if @store.errors.any? %>
+  <div id="error_explanation" class="alert alert-danger">
+    <ul>
+      <% @store.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
 <div class="row">
   <%= form_tag('/stores', method: :post) do %>
     <h4>投稿する</h4>

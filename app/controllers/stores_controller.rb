@@ -6,11 +6,16 @@ class StoresController < ApplicationController
   end
 
   def new
+    @store = Store.new
   end
 
   def create
-    Store.create(store_name: store_params[:store_name], c_card: store_params[:c_card], e_money: store_params[:e_money], user_id: current_user.id)
-    redirect_to :root
+    @store = Store.create(store_name: store_params[:store_name], c_card: store_params[:c_card], e_money: store_params[:e_money], user_id: current_user.id)
+    if @store.save
+      redirect_to :root
+    else
+      render("stores/new")
+    end
   end
 
   def edit
