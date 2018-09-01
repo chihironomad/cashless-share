@@ -1,0 +1,11 @@
+ja:
+ activerecord:
+ models:
+ attributes:
+   user: ユーザー
+   nickname: 名前
+   email: メールアドレス
+   password: パスワード
+   store_name: 店名
+   c_card: クレジットカードの種類
+   e_money: 電子マネーの種類
